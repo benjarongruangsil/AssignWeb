@@ -1,13 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import admin from '@/components/admin'
+import listmenu from '@/components/listmenu'
 import HelloWorld from '@/components/HelloWorld'
-import Stock from '@/components/Stock'
-import BootstrapVue from 'bootstrap-vue'
-import Buefy from 'buefy'
-import 'buefy/lib/buefy.css'
+import swal from 'sweetalert2'
 
-Vue.use(Buefy)
-Vue.use(BootstrapVue);
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -17,9 +14,14 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/Stock',
-      name: 'Stock',
-      component: Stock
+      path: '/admin',
+      name: 'admin',
+      component: admin
+    },
+    {
+      path: '/listmenu',
+      name: 'listmenu',
+      component: listmenu
     }
   ]
 })
